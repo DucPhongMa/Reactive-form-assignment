@@ -1,0 +1,105 @@
+<div class="register-area">
+    <h1>{{'form.title' | translate}}</h1>
+    <hr class="thick">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    
+        <div class="ontario-form-group">
+            <label class="ontario-label" for="text-input-example-width-20">
+                {{'form.firstName' | translate}}<span class="ontario-label__flag">({{'requirements.optional' | translate}})</span>
+            </label>
+            <input class="ontario-input mobile-input-width" type="text" id="text-input-example-width-20" formControlName="firstName">
+        </div>
+
+        <div class="ontario-form-group">
+            <label class="ontario-label" for="text-input-example-width-20">
+                {{'form.lastName' | translate}}<span class="ontario-label__flag">({{'requirements.optional' | translate}})</span>
+            </label>
+            <input class="ontario-input mobile-input-width" type="text" id="text-input-example-width-20" formControlName="lastName">
+        </div>
+      
+        <div class="ontario-form-group">
+            <label class="ontario-label" for="text-input-example-width-20">
+                {{'form.email' | translate}}<span class="ontario-label__flag">({{'requirements.required' | translate}})</span>
+            </label>
+            <div class="ontario-error-messaging">
+                <div class="ontario-error-messaging__container">
+                    <div *ngIf="checkError('email')" class="ontario-error-messaging__icon">
+                        <svg class="ontario-icon" alt="" aria-hidden="true" focusable="false" sol:category="primary" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet">
+                          
+                            <use href="#ontario-icon-alert-error"></use>
+                        </svg>
+                        
+                    </div>
+                    <div class="ontario-error-messaging__content" 
+                        *ngIf="checkError('email')"
+                    >
+                        <div *ngIf="form.get('email')?.errors?.['required']" class="text-danger">
+                           <span>{{'errors.email.required' | translate}}</span>
+                        </div>
+
+                        <div *ngIf="form.get('email')?.errors?.['pattern']" class="text-danger">
+                            {{'errors.email.format' | translate}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <input 
+            formControlName="email" 
+            [ngClass]="checkError('email') ? 'ontario-input mobile-input-width ontario-input__error' : 'ontario-input mobile-input-width'"
+            type="email">
+        </div>
+
+        <div class="ontario-form-group">
+            <label class="ontario-label" for="text-input-example-width-20">
+                {{'form.postalCode' | translate}}<span class="ontario-label__flag">({{'requirements.required' | translate}})</span>
+            </label>
+            <div class="ontario-error-messaging">
+                <div class="ontario-error-messaging__container">
+                    <div *ngIf="checkError('postalCode')" class="ontario-error-messaging__icon">
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" style="color: red;" class="ontario-icon" alt="" aria-hidden="true" focusable="false" sol:category="primary" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet">
+                            <use href="#ontario-icon-alert-error"></use>
+                        </svg>
+                        <!--<i class="material-icons">error</i>-->
+                    </div>
+                    <div class="ontario-error-messaging__content" 
+                        *ngIf="checkError('postalCode')"
+                    >
+                        <div *ngIf="form.get('postalCode')?.errors?.['required']" class="text-danger">
+                            {{'errors.postalCode.required' | translate}}
+                        </div>
+                        <div *ngIf="form.get('postalCode')?.errors?.['maxlength']" class="text-danger">
+                            {{'errors.postalCode.length' | translate}}
+                        </div>
+                        <div *ngIf="form.get('postalCode')?.errors?.['pattern']" class="text-danger">
+                            {{'errors.postalCode.format' | translate}}
+                        </div>
+                        <div *ngIf="form.get('postalCode')?.errors?.['yearValidatior']" class="text-danger">
+                            Invalid year
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--<input 
+                [ngClass]="checkError('postalCode') ? 
+                'ontario-input mobile-input-width ontario-input__error' : 
+                'ontario-input mobile-input-width'" 
+                type="text" id="text-input-example" formControlName="postalCode"
+                maxlength="11"
+                [value]="form.get('postalCode')?.value | sinFormat"
+            >-->
+            <input 
+                [ngClass]="checkError('postalCode') ? 
+                'ontario-input mobile-input-width ontario-input__error' : 
+                'ontario-input mobile-input-width'" 
+                type="text" id="text-input-example" formControlName="postalCode"
+                maxlength="4"
+              
+            >
+        </div>
+           
+
+        <button type="submit" class="btn btn-primary" type="submit">{{'form.button.submit' | translate}}</button>
+        
+    </form>
+</div>

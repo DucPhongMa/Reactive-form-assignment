@@ -1,0 +1,63 @@
+hr{
+    color: #ededed;
+}
+hr .thick{
+    height: 4px;
+    border-top: 0;
+   
+}
+
+.ontario-error-messaging__container {
+    display: flex;
+    align-items: top;
+    margin: -0.25rem 0 .5rem 0;
+    color: #d81a21
+}
+
+.ontario-error-messaging__content {
+    margin-left: .5rem
+}
+
+.ontario-input__error {
+    border-color: #d81a21 !important
+}
+
+.ontario-checkboxes__single-option .ontario-checkboxes__error .ontario-checkboxes__label:before {
+    border-color: #d81a21
+}
+
+
+/* Mobile & Tablet */
+@media (max-width: 1023px) {
+    .mobile-input-width{
+        min-width: 35ex;
+        max-width: 35px;
+    }
+
+     hr{
+        width: 38ex;
+    }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .mobile-input-width{
+        min-width: 80ex;
+        max-width: 80px;
+    }
+    hr{
+        width: 85ex;
+    }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .mobile-input-width{
+        min-width: 35ex;
+        max-width: 35px;
+    }
+
+     hr{
+        width: 38ex;
+    }
+}

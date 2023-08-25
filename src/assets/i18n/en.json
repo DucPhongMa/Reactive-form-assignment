@@ -1,0 +1,38 @@
+{
+    "header":{
+        "name": "FRO Online"
+    },
+    "form":{
+        "title": "User Information",
+        "firstName": "First name",
+        "lastName": "Last name",
+        "email": "Email address",
+        "postalCode": "Postal code",
+        "button": {
+            "submit": "submit"
+        }
+    },
+    "requirements":{
+        "required": "required",
+        "optional": "optional"
+    },
+    "errors":{
+        "email":{
+            "required":"Email is required.",
+            "format": "Wrong email format."
+        },
+        "postalCode":{
+            "required":"Postal Code is required.",
+            "length": "Postal Code maximum length is 7.",
+            "format": "Wrong postal code format"
+            
+        }
+    },
+
+    "footer":{
+        "accessibility": "Accessibility",
+        "privacy": "Privacy",
+        "contactUs": "Contact us",
+        "text": "King's Printer for Ontario,"
+    }
+}

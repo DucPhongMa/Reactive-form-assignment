@@ -1,0 +1,10 @@
+<button class="ontario-header__language-toggler ontario-header-button ontario-header-button--without-outline" (click)="changeLang();">
+    <div *ngIf="languages[language] == 'en'">   
+        <abbr title=Français class="ontario-show-for-small-only">Français</abbr>
+        <span title=Français class="ontario-show-for-medium">Français</span>
+    </div>
+    <div *ngIf="languages[language] == 'fr'">  
+        <abbr title=English class="ontario-show-for-small-only">English</abbr>
+        <span title=English class="ontario-show-for-medium">English</span>
+    </div>
+</button>

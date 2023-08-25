@@ -1,0 +1,37 @@
+{
+    "header":{
+        "name": "BOF en ligne"
+    },
+    "form":{
+        "title": "Informations de l'utilisateur",
+        "firstName": "Prénom",
+        "lastName": "Nom de famille",
+        "email": "Adresse e-mail",
+        "postalCode": "Code postal",
+        "button": {
+            "submit": "nous faire parvenir"
+        }
+    },
+    "requirements":{
+        "required": "obligatoire",
+        "optional": "optionnelle"
+    },
+    "errors":{
+        "email":{
+            "required":"Un e-mail est requis.",
+            "format": "Format d'e-mail incorrect."
+        },
+        "postalCode":{
+            "required":"Le code postal est requis.",
+            "length": "La longueur maximale du code postal est de 7.",
+            "format": "Mauvais format de code postal"
+        }
+    },
+   
+    "footer":{
+        "accessibility": "Accessibilité",
+        "privacy": "Confidentialité",
+        "contactUs": "Nous contacter",
+        "text": "Imprimeur du Roi pour l'Ontario,"
+    }
+}
